@@ -22,7 +22,7 @@ const api = {
     });
   },
 
-  update: function(id, obj, callback) {
+  update: function (id, obj, callback) {
     $.ajax({
       type: 'PUT',
       url: `/api/notes/${id}`,
@@ -42,8 +42,9 @@ const api = {
       processData: false,
       data: JSON.stringify(obj),
       success: callback
-  });
+    });
   },
+
   remove: function (id, callback) {
     return $.ajax({
       type: 'DELETE',

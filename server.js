@@ -5,7 +5,7 @@ const morgan = require('morgan');
 
 // const logger = require('./middleware/logger');
 const { PORT } = require('./config');
-const notesRouter = require('./routes/notes.router');
+const notesRouter = require('./router/notes.router');
 
 // Create an Express application
 const app = express();
@@ -19,6 +19,7 @@ app.use(express.static('public'));
 // Parse request body
 app.use(express.json());
 
+// Mount the router
 app.use('/api', notesRouter);
 
 // DEMO ONLY: brute-force way to test our error handler
