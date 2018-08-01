@@ -2,6 +2,8 @@
 
 const express = require('express');
 
+const router = express.Router();
+
 // // Simple In-Memory Database
 const data = require('../db/notes');
 const simDB = require('../db/simDB');
